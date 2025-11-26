@@ -1,4 +1,5 @@
-import { Doctor, Service } from './types';
+
+import { Doctor, Service, MedicalRecord, Prescription } from './types';
 
 export const DOCTORS: Doctor[] = [
   {
@@ -84,10 +85,57 @@ export const SERVICES: Service[] = [
   }
 ];
 
+export const MOCK_MEDICAL_HISTORY: MedicalRecord[] = [
+  {
+    id: 'rec_001',
+    date: '2023-10-15',
+    doctorName: 'Dr. Sarah Jenkins',
+    type: 'Checkup',
+    diagnosis: 'Mild Hypertension',
+    treatment: 'Lifestyle modification, reduced sodium intake.'
+  },
+  {
+    id: 'rec_002',
+    date: '2023-05-20',
+    doctorName: 'Dr. Robert Stone',
+    type: 'Consultation',
+    diagnosis: 'Acute Ankle Sprain',
+    treatment: 'RICE protocol, pain management.'
+  },
+  {
+    id: 'rec_003',
+    date: '2022-11-08',
+    doctorName: 'Dr. Emily Al-Fayed',
+    type: 'Checkup',
+    diagnosis: 'Annual Physical',
+    treatment: 'All vitals normal. Flu shot administered.'
+  }
+];
+
+export const MOCK_PRESCRIPTIONS: Prescription[] = [
+  {
+    id: 'rx_001',
+    medication: 'Lisinopril',
+    dosage: '10mg',
+    frequency: 'Once daily',
+    prescribedBy: 'Dr. Sarah Jenkins',
+    status: 'Active'
+  },
+  {
+    id: 'rx_002',
+    medication: 'Ibuprofen',
+    dosage: '400mg',
+    frequency: 'As needed for pain',
+    prescribedBy: 'Dr. Robert Stone',
+    status: 'Completed'
+  }
+];
+
 export const NAV_LINKS = [
   { label: 'Home', path: '/' },
   { label: 'About Us', path: '/about' },
   { label: 'Services', path: '/services' },
   { label: 'Doctors', path: '/doctors' },
+  { label: 'Patient Portal', path: '/history' },
   { label: 'Contact', path: '/contact' },
 ];

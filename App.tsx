@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { HashRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import Header from './components/Header';
@@ -8,6 +9,7 @@ import About from './pages/About';
 import Services from './pages/Services';
 import Doctors from './pages/Doctors';
 import Appointment from './pages/Appointment';
+import MedicalHistory from './pages/MedicalHistory';
 
 // ScrollToTop component to handle route changes
 const ScrollToTop = () => {
@@ -33,6 +35,7 @@ const App: React.FC = () => {
             <Route path="/services" element={<Services />} />
             <Route path="/doctors" element={<Doctors />} />
             <Route path="/appointment" element={<Appointment />} />
+            <Route path="/history" element={<MedicalHistory />} />
             <Route path="/contact" element={<div className="pt-32 text-center pb-32"> <h1 className="text-3xl">Contact Page</h1><p>Use the Appointment form or details in Footer.</p></div>} />
           </Routes>
         </main>
